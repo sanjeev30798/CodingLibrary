@@ -10,7 +10,7 @@ int main()
     while(t--)
     {
         int n,m;
-        cin>>n>>m;
+        cin>>n>>m; // number of nodes and edges
         vector<int> adj[n+1];
         deque<int> q;
         int i;
@@ -19,8 +19,8 @@ int main()
         {
             int e1,e2;
             cin>>e1>>e2;
-            adj[e1].push_back(e2);
-            adj[e2].push_back(e1);
+            adj[e1].push_back(e2); // undirected graph
+            adj[e2].push_back(e1); // undirected graph
         }
         bool b[n];
         memset(b,false,sizeof b);
